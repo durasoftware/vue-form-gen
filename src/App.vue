@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import SuperComponent from "./components/SuperComponent.vue";
+import { ref } from "vue";
+import FormGen from "./components/FormGen.vue";
 
 import type { IComponent } from "./types";
 
@@ -51,13 +52,10 @@ const schema: IComponent[] = [
     ],
   },
 ];
+
+const data = ref<Record<string, any>>({});
 </script>
 
 <template>
-  <SuperComponent
-    v-model="data[component.name]"
-    v-for="component in schema"
-    v-bind="component"
-  >
-  </SuperComponent>
+  <FormGen v-model="data" :schema="schema" />
 </template>

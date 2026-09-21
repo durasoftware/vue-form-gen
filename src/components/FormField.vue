@@ -24,7 +24,7 @@ const onInput = (e: Event) => {
       gap: '8px',
     }"
   >
-    <SuperComponent
+    <FormField
       v-for="child in props.children"
       v-bind="child"
       :model-value="model?.[child.name]"
@@ -33,7 +33,7 @@ const onInput = (e: Event) => {
       <template v-for="(_, name) in $slots" #[name]="slotProps">
         <slot :name="name" v-bind="slotProps" />
       </template>
-    </SuperComponent>
+    </FormField>
   </div>
 
   <slot
