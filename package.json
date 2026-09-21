@@ -1,7 +1,9 @@
 {
-  "name": "vue-form-gen",
+  "name": "@durasoftware/vue-form-gen",
   "version": "0.1.0",
   "type": "module",
+  "author": "durasoft",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
@@ -32,5 +34,8 @@
   "sideEffects": false,
   "peerDependencies": {
     "vue": "^3.5.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
